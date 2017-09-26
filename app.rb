@@ -17,9 +17,9 @@ class App < Sinatra::Base
 
     get '/goodbye/:name' do
     "Goodbye, #{@user_name}."
-  end 
+  end
 
-  
+
   def name
     @user_name = goodbye.select do
       |goodbye|
