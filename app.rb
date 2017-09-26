@@ -20,23 +20,9 @@ class App < Sinatra::Base
     "Goodbye, #{@user_name}."
   end
 
-
-  
-    
-        end.first
-        erb :'/name/show.html'
-    end
-
     get '/multiply/:number1/:number2' do
-      "number1 and number2"
+      @number1, @number2 = params[:number1].to_i, params[:number2].to_i
+      "#{@number1} *#{@number2}"
     end
 
-    def number
-    @user_number = number.select do
-      |number1, number2|
-            multiply.number == params[:number1, :numner2]
-          end.first
-          erb :'/number1/:number2/show.html'
-        end
-end
-#last_response.body
+  end 
